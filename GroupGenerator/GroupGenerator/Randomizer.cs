@@ -44,17 +44,18 @@ static class Randomizer
         else
         {
             Person tempPerson;
-
+            Person tempKey;
 
             for (int i = 0; i < somePeople.Count; i++)
             {
                 tempPerson = somePeople[i];
                 for (int j = 0; j < tempPerson.GetPreferedPeople.Count; j++)
                 {
-                    if (tempPerson.GetPreferedPeople[j].GetPreferedPeople.Contains(tempPerson) == true)
+                    tempKey = tempPerson.GetPreferedPeople.ElementAt(j).Key;
+                    if (tempKey.GetPreferedPeople.ContainsKey(tempPerson) == true)
                     {
                         //Mutual Love
-
+                        tempPerson.GetPreferedPeople[tempKey] = 100f;
                     }
                 }
             }

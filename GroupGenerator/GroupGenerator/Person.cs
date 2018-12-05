@@ -9,7 +9,7 @@ class Person
     public Person(string aName)
     {
         myName = aName;
-        myPreferedPeople = new List<Person>();
+        myPreferedPeople = new Dictionary<Person, float>();
     }
 
     public void Init(string aName)
@@ -19,13 +19,13 @@ class Person
 
     public void AddPreferedPerson(Person aPerson)
     {
-        myPreferedPeople.Add(aPerson);
+        myPreferedPeople.Add(aPerson, 0f);
     }
 
     public string AccessName { get => myName; set => myName = value; }
-    internal List<Person> GetPreferedPeople { get => myPreferedPeople; }
+    public Dictionary<Person, float> GetPreferedPeople { get => myPreferedPeople; }
 
     string myName;
-    List<Person> myPreferedPeople;
+    Dictionary<Person, float> myPreferedPeople;
 
 }
