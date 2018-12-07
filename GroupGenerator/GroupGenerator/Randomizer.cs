@@ -52,10 +52,14 @@ static class Randomizer
                 for (int j = 0; j < tempPerson.GetPreferedPeople.Count; j++)
                 {
                     tempKey = tempPerson.GetPreferedPeople.ElementAt(j).Key;
-                    if (tempKey.GetPreferedPeople.ContainsKey(tempPerson) == true)
+                    if (tempKey.CheckPeople(tempPerson) == true)
                     {
                         //Mutual Love
-                        tempPerson.GetPreferedPeople[tempKey] = 100f;
+                    }
+                    else if (tempKey.CheckSubPeople(tempPerson) == true)
+                    {
+                        //Sub Love, one way
+
                     }
                 }
             }

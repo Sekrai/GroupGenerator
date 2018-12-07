@@ -161,6 +161,18 @@ class Program
             } while (tempName.Contains("-") == false);
         }
 
+        //Person tempKey;
+        for (int i = 0; i < tempGroups.Count; i++)
+        {
+            for (int j = 0; j < tempGroups.Count; j++)
+            {
+                if (tempGroups[j].ContainsName(tempGroups[i].AccessName) != null)
+                {
+                    tempGroups[j].Remove(tempGroups[i].AccessName);
+                    tempGroups[j].AddPreferedPerson(tempGroups[i]);
+                }
+            }
+        }
 
         tempGroups = Randomizer.ScrambleGroup(tempGroups);
 

@@ -5,3 +5,10 @@ C:\Users\andre.dilles\Documents\Visual Studio 2017\Projects\GroupGenerator\Group
 C:\Users\andre.dilles\Documents\Visual Studio 2017\Projects\GroupGenerator\GroupGenerator\obj\Debug\GroupGenerator.csproj.CoreCompileInputs.cache
 C:\Users\andre.dilles\Documents\Visual Studio 2017\Projects\GroupGenerator\GroupGenerator\obj\Debug\GroupGenerator.exe
 C:\Users\andre.dilles\Documents\Visual Studio 2017\Projects\GroupGenerator\GroupGenerator\obj\Debug\GroupGenerator.pdb
+C:\Users\andre.dilles\Documents\GitHub\GroupGenerator\GroupGenerator\GroupGenerator\bin\Debug\GroupGenerator.exe.config
+C:\Users\andre.dilles\Documents\GitHub\GroupGenerator\GroupGenerator\GroupGenerator\bin\Debug\GroupGenerator.exe
+C:\Users\andre.dilles\Documents\GitHub\GroupGenerator\GroupGenerator\GroupGenerator\bin\Debug\GroupGenerator.pdb
+C:\Users\andre.dilles\Documents\GitHub\GroupGenerator\GroupGenerator\GroupGenerator\obj\Debug\GroupGenerator.csprojAssemblyReference.cache
+C:\Users\andre.dilles\Documents\GitHub\GroupGenerator\GroupGenerator\GroupGenerator\obj\Debug\GroupGenerator.csproj.CoreCompileInputs.cache
+C:\Users\andre.dilles\Documents\GitHub\GroupGenerator\GroupGenerator\GroupGenerator\obj\Debug\GroupGenerator.exe
+C:\Users\andre.dilles\Documents\GitHub\GroupGenerator\GroupGenerator\GroupGenerator\obj\Debug\GroupGenerator.pdb
