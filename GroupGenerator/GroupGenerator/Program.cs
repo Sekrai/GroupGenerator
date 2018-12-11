@@ -146,14 +146,14 @@ class Program
                         tempPrefName = tempPrefName.Remove(0, tempPrefName.IndexOf(":") + 1);
                         //tempPrefName = Regex.Replace(tempPrefName, "[^a-zA-Z0-9_.]+", "");       //tempPrefName.TakeWhile(c => !Char.IsLetterOrDigit(c)).ToString()));//new string(tempPrefName.TakeWhile(c => !Char.IsLetter(c)).ToArray());
                         //tempPrefName = Regex.Replace(tempPrefName, @"\s+", "");
-                        Person tempPrefPerson = new Person(tempPrefName);
+                        Person tempPrefPerson = new Person(tempPrefName.ToLower());
 
                         tempPerson.AddPreferedPerson(tempPrefPerson);
 
                         tempName = tempName.Remove(tempName.LastIndexOf(":"));
                     }
 
-                    tempPerson.Init(tempName);
+                    tempPerson.Init(tempName.ToLower());
 
 
                     tempGroups.Add(tempPerson);
@@ -174,7 +174,10 @@ class Program
             }
         }
 
-        tempGroups = Randomizer.ScrambleGroup(tempGroups);
+        if (myScramble == true)
+        {
+            tempGroups = Randomizer.ScrambleGroup(tempGroups);
+        }
 
 
         return tempGroups;

@@ -46,7 +46,7 @@ class Person
             if(myPreferedPeople.ContainsKey(aPerson) == true)
             {
                 myPreferedPeople[aPerson] += 100f;
-                aPerson.myPreferedPeople[this] += 100f;
+                //aPerson.myPreferedPeople[this] += 100f;
                 return true;
             }
         }
