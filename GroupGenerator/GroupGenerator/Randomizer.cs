@@ -49,14 +49,14 @@ static class Randomizer
             for (int i = 0; i < somePeople.Count; i++)
             {
                 tempPerson = somePeople[i];
-                for (int j = 0; j < tempPerson.GetPreferedPeople.Count; j++)
+                for (int j = 0; j < tempPerson.AccessPreferedPeople.Count; j++)
                 {
-                    tempKey = tempPerson.GetPreferedPeople.ElementAt(j).Key;
+                    tempKey = tempPerson.AccessPreferedPeople[j].GetOther(tempPerson);
                     if (tempKey.CheckPeople(tempPerson) == true)
                     {
                         //Mutual Love
                     }
-                    else if (tempKey.CheckSubPeople(tempPerson) == true)
+                    if (tempKey.CheckSubPeople(tempPerson) == true)
                     {
                         //Sub Love, one way
 

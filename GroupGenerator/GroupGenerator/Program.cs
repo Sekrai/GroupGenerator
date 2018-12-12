@@ -105,12 +105,10 @@ class Program
 
     public static List<Person> LoadPeople()
     {
-        List<Person> tempGroups = new List<Person>();
-
         using (StreamReader stream = new StreamReader(Path.GetFullPath("People.txt")))
         {
             string tempName;
-            string tempPrefName;
+            string tempSubString;
 
 
             int.TryParse(Regex.Match(stream.ReadLine().ToString(), @"\d+").Value, out myNrOfGroups);
@@ -140,49 +138,71 @@ class Program
                 {
                     Person tempPerson = new Person("");
 
+                    tempSubString = tempName.Substring(0, tempName.IndexOf(":"));
+                    tempName = tempName.Remove(0, tempName.IndexOf(":") + 1);
+
+                    tempPerson.Init(tempSubString.ToLower());
+
                     while (tempName.Contains(":") == true)
                     {
-                        tempPrefName = tempName.Substring(tempName.LastIndexOf(":"));
-                        tempPrefName = tempPrefName.Remove(0, tempPrefName.IndexOf(":") + 1);
+                        tempSubString = tempName.Substring(0, tempName.IndexOf(":"));
+                        //tempSubString = tempSubString.Remove(0, tempSubString.IndexOf(":") + 1);
                         //tempPrefName = Regex.Replace(tempPrefName, "[^a-zA-Z0-9_.]+", "");       //tempPrefName.TakeWhile(c => !Char.IsLetterOrDigit(c)).ToString()));//new string(tempPrefName.TakeWhile(c => !Char.IsLetter(c)).ToArray());
                         //tempPrefName = Regex.Replace(tempPrefName, @"\s+", "");
-                        Person tempPrefPerson = new Person(tempPrefName.ToLower());
+
+                        Person tempPrefPerson = ContainsPerson(tempSubString.ToLower());//new Person(tempSubString.ToLower());
+
+                        if (tempPrefPerson == null)
+                        {
+                            tempPrefPerson = new Person(tempSubString.ToLower());
+                        }
 
                         tempPerson.AddPreferedPerson(tempPrefPerson);
 
-                        tempName = tempName.Remove(tempName.LastIndexOf(":"));
+                        tempName = tempName.Remove(0, tempName.IndexOf(":") + 1);
                     }
 
-                    tempPerson.Init(tempName.ToLower());
-
-
-                    tempGroups.Add(tempPerson);
+                    myPeople.Add(tempPerson);
                 }
             } while (tempName.Contains("-") == false);
         }
 
         //Person tempKey;
-        for (int i = 0; i < tempGroups.Count; i++)
+        for (int i = 0; i < myPeople.Count; i++)
         {
-            for (int j = 0; j < tempGroups.Count; j++)
+            for (int j = 0; j < myPeople.Count; j++)
             {
-                if (tempGroups[j].ContainsName(tempGroups[i].AccessName) != null)
+                if (myPeople[j].ContainsName(myPeople[i].AccessName) != null)
                 {
-                    tempGroups[j].Remove(tempGroups[i].AccessName);
-                    tempGroups[j].AddPreferedPerson(tempGroups[i]);
+                    myPeople[j].Remove(myPeople[i]);
+                    myPeople[j].AddPreferedPerson(myPeople[i]);
                 }
             }
         }
 
         if (myScramble == true)
         {
-            tempGroups = Randomizer.ScrambleGroup(tempGroups);
+            myPeople = Randomizer.ScrambleGroup(myPeople);
         }
 
 
-        return tempGroups;
+        return myPeople;
     }
 
+
+    public static Person ContainsPerson(string aName)
+    {
+        for (int i = 0; i < myPeople.Count; i++)
+        {
+            if (myPeople[i].AccessName == aName)
+            {
+                return myPeople[i];
+            }
+        }
+        return null;
+    }
+
+    static List<Person> myPeople = new List<Person>();
 
     static int myNrOfGroups = 0;
     static bool myScramble = true;
