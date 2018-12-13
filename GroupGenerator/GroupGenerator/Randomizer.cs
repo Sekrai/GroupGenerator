@@ -13,12 +13,20 @@ static class Randomizer
 
     public static int Random(int aMin, int aMax)
     {
-        return myRandomizer.Next(aMax, aMax);
+        return myRandomizer.Next(aMin, aMax);
+    }
+
+    public static int Random(Dictionary<int, List<Person>> aGroupCollection)
+    {
+        int tempElements = aGroupCollection.Count - 1;
+
+        return aGroupCollection.ElementAt(Random(0, tempElements)).Key;
     }
 
     public static Dictionary<int, List<Person>> Random(List<Person> somePeople, int aNrOfGroups = 7, bool aScrambleFlag = true)
     {
         Dictionary<int, List<Person>> tempGroups = new Dictionary<int, List<Person>>();
+        List<Person> remainingPeople = somePeople;
 
         for (int i = 0; i < aNrOfGroups; i++)
         {
@@ -26,45 +34,167 @@ static class Randomizer
         }
 
         int tempRandomGroup = 0;
+        Dictionary<int, List<Person>> tempSmallestGroups = new Dictionary<int, List<Person>>();
 
         if (aScrambleFlag == true)
         {
-            Dictionary<int, List<Person>> tempSmallestGroups = new Dictionary<int, List<Person>>();
 
             for (int i = 0; i < somePeople.Count; i++)
             {
                 tempSmallestGroups = GetLowestGroups(tempGroups);
-                //var tempList = tempGroups.Where(x => x.Value.Count <= aMaxGroupSize);
-                tempRandomGroup = Random(0, tempSmallestGroups.Count - 1);
-
+                tempRandomGroup = Random(tempSmallestGroups);
                 tempSmallestGroups[tempRandomGroup].Add(somePeople[i]);
 
             }
         }
         else
         {
-            Person tempPerson;
-            Person tempKey;
 
-            for (int i = 0; i < somePeople.Count; i++)
+            ////Person tempPerson;
+            ////Person tempKey;
+            ////for (int i = 0; i < somePeople.Count; i++)
+            ////{
+            ////    tempPerson = somePeople[i];
+            ////    for (int j = 0; j < tempPerson.GetLinks.Count; j++)
+            ////    {
+            ////        tempKey = tempPerson.GetLinks[j].GetOther(tempPerson);
+            ////        if (tempKey.CheckPeople(tempPerson) == true)
+            ////        {
+            ////            //Mutual Love
+            ////        }
+            ////        if (tempKey.CheckSubPeople(tempPerson) == true)
+            ////        {
+            ////            //Sub Love, one way
+            ////        }
+            ////    }
+            ////}
+
+            //int tempGroupSize = somePeople.Count / aNrOfGroups;
+            //int currentLinkWeight = 0;
+
+            //    Person tempPerson;
+            //    Person tempLinkedPerson;
+
+            //    for (int i = 0; i < somePeople.Count; i++)
+            //    {
+            //        tempPerson = somePeople[i];
+            //        if (remainingPeople.Contains(tempPerson) == true)
+            //        {
+            //            for (int j = 0; j < tempPerson.GetLinks.Count; j++)
+            //            {
+            //                currentLinkWeight = tempPerson.GetLinks[j].AccessWeigth;
+
+            //                if (currentLinkWeight >= 100)
+            //                {
+            //                    tempSmallestGroups = GetLowestGroups(tempGroups);
+            //                    tempRandomGroup = Random(tempSmallestGroups);
+
+
+            //                    if (tempSmallestGroups[tempRandomGroup].Contains(tempPerson) == false)
+            //                    {
+            //                        tempSmallestGroups[tempRandomGroup].Add(tempPerson);
+            //                        remainingPeople.Remove(tempPerson);
+            //                    }
+
+            //                    tempLinkedPerson = tempPerson.GetLinks[j].GetOther(tempPerson);
+
+            //                    if (tempSmallestGroups[tempRandomGroup].Contains(tempLinkedPerson) == false && remainingPeople.Contains(tempLinkedPerson) == true)
+            //                    {
+            //                        tempSmallestGroups[tempRandomGroup].Add(tempLinkedPerson);
+            //                        remainingPeople.Remove(tempLinkedPerson);
+            //                    }
+
+            //                    tempSmallestGroups.Clear();
+            //                }
+            //                else if (currentLinkWeight >= 50 && currentLinkWeight < 100)
+            //                {
+            //                    tempSmallestGroups = GetLowestGroups(tempGroups);
+
+            //                    do
+            //                    {
+            //                        tempRandomGroup = Random(tempSmallestGroups);
+
+            //                        if (tempSmallestGroups[tempRandomGroup].Count >= tempGroupSize)
+            //                        {
+            //                            if (tempSmallestGroups.Count > 1)
+            //                            {
+            //                                tempSmallestGroups.Remove(tempRandomGroup);
+            //                                tempRandomGroup = Random(tempSmallestGroups);
+            //                            }
+            //                        }
+
+            //                        if (tempSmallestGroups.Count <= 1)
+            //                        {
+            //                            tempRandomGroup = tempSmallestGroups.ElementAt(0).Key;
+            //                            break;
+            //                        }
+            //                    } while ((tempSmallestGroups[tempRandomGroup].Count - 1) >= tempGroupSize);
+
+            //                    if (tempSmallestGroups[tempRandomGroup].Contains(tempPerson) == false)
+            //                    {
+            //                        tempSmallestGroups[tempRandomGroup].Add(tempPerson);
+            //                        remainingPeople.Remove(tempPerson);
+            //                    }
+
+            //                    tempLinkedPerson = tempPerson.GetLinks[j].GetOther(tempPerson);
+
+            //                    if (tempSmallestGroups[tempRandomGroup].Contains(tempLinkedPerson) == false && remainingPeople.Contains(tempLinkedPerson) == true)
+            //                    {
+            //                        tempSmallestGroups[tempRandomGroup].Add(tempLinkedPerson);
+            //                        remainingPeople.Remove(tempLinkedPerson);
+            //                    }
+
+            //                    tempSmallestGroups.Clear();
+            //                }
+            //            }
+
+
+            //            tempSmallestGroups = GetLowestGroups(tempGroups);
+            //            tempRandomGroup = Random(0, tempSmallestGroups.Count - 1);
+
+            //            if (tempSmallestGroups[tempRandomGroup].Contains(tempPerson) == false && remainingPeople.Contains(tempPerson) == true)
+            //            {
+            //                tempSmallestGroups[tempRandomGroup].Add(tempPerson);
+            //                remainingPeople.Remove(tempPerson);
+            //            }
+
+            //            tempSmallestGroups.Clear();
+
+            //        }
+            //    }
+            //}
+
+            Person currentPerson;
+            Person tempLinkedPerson;
+
+            while (remainingPeople.Count > 0)
             {
-                tempPerson = somePeople[i];
-                for (int j = 0; j < tempPerson.AccessPreferedPeople.Count; j++)
-                {
-                    tempKey = tempPerson.AccessPreferedPeople[j].GetOther(tempPerson);
-                    if (tempKey.CheckPeople(tempPerson) == true)
-                    {
-                        //Mutual Love
-                    }
-                    if (tempKey.CheckSubPeople(tempPerson) == true)
-                    {
-                        //Sub Love, one way
+                currentPerson = remainingPeople[Random(0, remainingPeople.Count)];
 
+
+                tempSmallestGroups = GetLowestGroups(tempGroups);
+                tempRandomGroup = Random(tempSmallestGroups);
+
+
+                tempSmallestGroups[tempRandomGroup].Add(currentPerson);
+                remainingPeople.Remove(currentPerson);
+
+                for (int i = 0; i < currentPerson.GetLinks.Count; i++)
+                {
+                    if (currentPerson.GetLinks[i].AccessWeigth >= 75)
+                    {
+                        tempLinkedPerson = currentPerson.GetLinks[i].GetOther(currentPerson);
+
+                        if (remainingPeople.Contains(tempLinkedPerson) == true)
+                        {
+                            tempSmallestGroups[tempRandomGroup].Add(tempLinkedPerson);
+                            remainingPeople.Remove(tempLinkedPerson);
+                        }
                     }
                 }
+                tempSmallestGroups.Clear();
             }
         }
-
         return tempGroups;
     }
 

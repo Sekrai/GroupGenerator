@@ -10,7 +10,8 @@ class Person
     {
         myName = aName;
         //MyPreferedPeople = new Dictionary<Person, float>();
-        myPreferedPeople = new List<Link>();
+        myLinks = new List<Link>();
+        myPeople = new List<Person>();
     }
 
     public void Init(string aName)
@@ -20,40 +21,62 @@ class Person
 
     public void AddPreferedPerson(Person aPerson)
     {
+        myPeople.Add(aPerson);
+    }
+
+    public void AddLink(Link aLink)
+    {
+        myLinks.Add(aLink);
+    }
+
+    public void AddLink(Person aPerson)
+    {
         if (aPerson.ContainsName(myName) == null)
         {
             Link tempLink = new Link(aPerson, this);
-            myPreferedPeople.Add(tempLink);
-            aPerson.myPreferedPeople.Add(tempLink);
+            myLinks.Add(tempLink);
+            aPerson.myLinks.Add(tempLink);
         }
         else
         {
-            myPreferedPeople.Add(aPerson.ContainsPerson(this));
+            myLinks.Add(aPerson.ContainsLink(this));
         }
     }
 
     public Person ContainsName(string aName)
     {
-        for (int i = 0; i < myPreferedPeople.Count; i++)
+        for (int i = 0; i < myLinks.Count; i++)
         {
-            if (myPreferedPeople[i].GetOther(this).AccessName == aName)
+            if (myLinks[i].GetOther(this).AccessName == aName)
             {
-                return myPreferedPeople[i].GetOther(this);
+                return myLinks[i].GetOther(this);
             }
         }
         return null;
     }
 
-    public Link ContainsPerson(Person aPerson)
+    public Link ContainsLink(Person aPerson)
     {
-        for (int i = 0; i < myPreferedPeople.Count; i++)
+        for (int i = 0; i < myLinks.Count; i++)
         {
-            if (myPreferedPeople[i].Contains(aPerson) == true)
+            if (myLinks[i].Contains(aPerson) == true)
             {
-                return myPreferedPeople[i];
+                return myLinks[i];
             }
         }
         return null;
+    }
+
+    public bool ContainsPerson(Person aPerson)
+    {
+        for (int i = 0; i < myPeople.Count; i++)
+        {
+            if (myPeople[i] == aPerson)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     //public void Remove(string aName)
@@ -63,9 +86,9 @@ class Person
 
     public void Remove(Person aPerson)
     {
-        if (ContainsPerson(aPerson) != null)
+        if (ContainsLink(aPerson) != null)
         {
-            myPreferedPeople.Remove(ContainsPerson(aPerson));
+            myLinks.Remove(ContainsLink(aPerson));
         }
     }
 
@@ -85,10 +108,10 @@ class Person
 
     public bool CheckPeople(Person aPerson)
     {
-        Link tempLink = ContainsPerson(aPerson);
+        Link tempLink = ContainsLink(aPerson);
         if (tempLink != null)
         {
-            tempLink.AccessWeigth += 100f;
+            tempLink.AccessWeigth += 100;
             return true;
         }
         return false;
@@ -99,15 +122,15 @@ class Person
         Person tempPerson;
         Person tempSub;
 
-        for (int i = 0; i < myPreferedPeople.Count; i++)
+        for (int i = 0; i < myLinks.Count; i++)
         {
-            tempPerson = myPreferedPeople[i].GetOther(this);
-            for (int j = 0; j < tempPerson.myPreferedPeople.Count; j++)
+            tempPerson = myLinks[i].GetOther(this);
+            for (int j = 0; j < tempPerson.myLinks.Count; j++)
             {
-                tempSub = tempPerson.myPreferedPeople[j].GetOther(this);
-                if (tempSub.ContainsPerson(aPerson) != null)
+                tempSub = tempPerson.myLinks[j].GetOther(this);
+                if (tempSub.ContainsLink(aPerson) != null)
                 {
-                    tempSub.ContainsPerson(aPerson).AccessWeigth += 33f;
+                    tempSub.ContainsLink(aPerson).AccessWeigth += 33;
                     return true;
                 }
             }
@@ -115,14 +138,17 @@ class Person
         return false;
     }
 
+
     public string AccessName { get => myName; set => myName = value; }
-    public List<Link> AccessPreferedPeople { get => myPreferedPeople; }
+    public List<Link> GetLinks { get => myLinks; }
+    public List<Person> GetPeople { get => myPeople; }
 
     //public Dictionary<Person, float> GetPreferedPeople { get => myPreferedPeople; }
 
     string myName;
     //Dictionary<Person, float> myPreferedPeople;
 
-    List<Link> myPreferedPeople;
-
+    List<Link> myLinks;
+    List<Person> myPeople;
+    
 }

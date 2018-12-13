@@ -1,0 +1,26 @@
+Number Of Groups: 5
+Scramble: 0			//1 for scrambled groups, 0 for weigthed groups
+
+------------------------------
+Kevin1:Mina1:Jack1:Ivar1:
+Jack1:Kevin1:Mina1:Ivar1:
+Mina1:Jack1:Kevin1:Ivar1:
+Ivar1:Mina1:Jack1:Kevin1:
+Karl1:Daniel1:
+Daniel1:Thomas1:
+Thomas1:Karl1:
+Per 1:
+Kenny1:
+Johannes1:
+Kevin2:Jack2:Ivar2:
+Jack2:Mina2:Ivar2:
+Mina2:
+Ivar2:Mina2:
+Karl2:
+Daniel2:
+Thomas2:
+Per2:
+Kenny2:
+Johannes2:
+André:
+------------------------------

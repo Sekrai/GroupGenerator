@@ -1,0 +1,147 @@
+Number Of Groups: 9
+Scramble: 0			//1 for scrambled groups, 0 for weigthed groups
+
+------------------------------
+Harald Sjövall:Axel Lundin:Linus Bensryd:Hassan Abas:
+Adam Häggström:Elliot Seger:
+William Arnback:Per Hansson:Måns Wiking:My Roslund:
+Måns Wiking:William Arnback:Per Hansson:Emil Olsson:
+Per Hansson:William Arnback:Måns Wiking:David Bohlin:
+Isak Krüger:Ruben Svensson Clementz:Victor Pantorp:Pepe halderit:
+Sofia Falcenclou:Ruben Svensson Clementz:Isak Krüger:
+Ruben Svensson Clementz:Sofia Falcenclou:Isak Krüger:Karam Kirawan:
+Isak Walther:Måns Wiking:Per Hansson:Emil Olsson:
+Emil Karlgren:Sebastian Mauritzsson:Vera Laosap:Victor Vives Ström:
+Sebastian Mauritzsson:Emil Karlgren:Vera Laosap:Max Kock:
+Amanda Önnestam:Benjamin Landin:Hassan Abas:	
+Aron Tinz:
+Vera Laosap:Emil Karlgren:Sebastian Mauritzsson:Max Kock:
+Daniel Gryningstjerna:Alexander Molested:Max Kock:Aron Tinz:
+Alexander Molested:Daniel Gryningstjerna:Max Kock:Aron Tinz:
+Victor Pantorp:Isak Krüger:Rebecca Eriksson Öst:Pepe Moonen Halderit:
+Siri Katsler:Elin Palmgren:Tamachat Hejderup:	
+Måns Mattisson:David Bohlin:Rasmus Fredriksson:Emil Olsson:
+Max Kock:
+Rebecca Eriksson Öst:Victor Pantorp:Alexander Granquist:Elvira Smakic:
+Jakob Svensson:Noah Lundqvist:Jesper Nilsson:Linus Andersson:
+Emil Svensson:Cleopas Masona:My Roslund:
+Måns Wiking:
+William Persson:Stefan Groothuis:Alvin Andersson Eriksson:Elvira Smakic:
+Alvin Andersson Eriksson:Stefan Groothuis:Elvira Smakic:William Persson:
+Stefan Groothuis:Alvin Andersson Eriksson:William Persson:Elvira Smakic:
+Elvira Smakic:Stefan Groothuis:Alvin Andersson Eriksson:William Persson:
+Gustav Andersson:Aron Tinz:Emil Olsson:	
+Cleopas Masona:My Roslund:		
+Loke Anderberg:Emil Karlgren:Sebastian Mauritzsson:Tamachat Hejderup:
+Mimmi Mathiasson:Vanessa Johansson:		
+Tamachat Hejderup:David Bohlin:Jens Wigeland Andersson:Emil Olsson:
+Simon Sjöholm:Emir Busgovic:Noah Lundquist:	
+Benjamin Landin:Amanda Önnestam:Hassan Abas:	
+Josefine Krynska:Emil Nilsson:Amanda Önnestam:Benjamin Landin:
+Emil Nilsson:Josefine Krynska:Amanda Önnestam:Benjamin Landin:
+Olle Andersson:Emil Ekblad:Oskar Dagner:Isak Walther:
+Sebastian Egeberg:Sebastian Hansson:Vendela Johansson:Vanessa Johansson:
+Eddi Rukavina:Noah Buchanan:Alexander Granquist:Emil Karlgren:
+Alexander Granquist:Rebecca Eriksson Öst:Tamachat Hejderup:Victor Pantorp:
+Noah Buchanan:Aron Tinz:Sixten Schelin:Loke Anderberg:
+Emil Adolfsson:Olle Andersson:Emil Ekblad:Isak Walther:
+Emil Ekblad:Isak Walther:Emil Adolfsson:Olle Andersson:
+My Roslund:Cleopas Masona:Elvira Smakic:Sixten Schelin:
+------------------------------
+
+
+-------------------------------------------------------------
+Group 1
+-------------------------------------------------------------
+victor vives ström
+vendela johansson
+vera laosap
+sebastian mauritzsson
+emil karlgren
+max kock
+axel lundin
+tamachat hejderup
+-------------------------------------------------------------
+Group 2
+-------------------------------------------------------------
+måns wiking
+per hansson
+william arnback
+isak walther
+emil olsson
+sixten schelin
+pepe halderit
+simon sjöholm
+-------------------------------------------------------------
+Group 3
+-------------------------------------------------------------
+sebastian hansson
+linus andersson
+jens wigeland andersson
+benjamin landin
+amanda önnestam
+hassan abas
+emil nilsson
+josefine krynska
+-------------------------------------------------------------
+Group 4
+-------------------------------------------------------------
+elvira smakic
+stefan groothuis
+alvin andersson eriksson
+william persson
+mimmi mathiasson
+jakob svensson
+elin palmgren
+-------------------------------------------------------------
+Group 5
+-------------------------------------------------------------
+måns mattisson
+elliot seger
+oskar dagner
+karam kirawan
+linus bensryd
+noah lundquist
+siri katsler
+-------------------------------------------------------------
+Group 6
+-------------------------------------------------------------
+emil ekblad
+emil adolfsson
+olle andersson
+david bohlin
+emir busgovic
+vanessa johansson
+eddi rukavina
+sebastian egeberg
+-------------------------------------------------------------
+Group 7
+-------------------------------------------------------------
+rebecca eriksson öst
+alexander granquist
+rasmus fredriksson
+harald sjövall
+cleopas masona
+my roslund
+emil svensson
+-------------------------------------------------------------
+Group 8
+-------------------------------------------------------------
+isak krüger
+ruben svensson clementz
+victor pantorp
+sofia falcenclou
+noah buchanan
+adam häggström
+loke anderberg
+-------------------------------------------------------------
+Group 9
+-------------------------------------------------------------
+aron tinz
+alexander molested
+daniel gryningstjerna
+pepe moonen halderit
+noah lundqvist
+jesper nilsson
+gustav andersson
+-------------------------------------------------------------

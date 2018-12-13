@@ -136,12 +136,16 @@ class Program
                 tempName = stream.ReadLine().ToString();
                 if (tempName.Contains("-") == false)
                 {
-                    Person tempPerson = new Person("");
 
                     tempSubString = tempName.Substring(0, tempName.IndexOf(":"));
                     tempName = tempName.Remove(0, tempName.IndexOf(":") + 1);
 
-                    tempPerson.Init(tempSubString.ToLower());
+                    Person tempPerson = ContainsPerson(tempSubString); //.ToLower());
+                    if (tempPerson == null)
+                    {
+                        tempPerson = new Person(tempSubString); //.ToLower());
+                    }
+
 
                     while (tempName.Contains(":") == true)
                     {
@@ -150,11 +154,12 @@ class Program
                         //tempPrefName = Regex.Replace(tempPrefName, "[^a-zA-Z0-9_.]+", "");       //tempPrefName.TakeWhile(c => !Char.IsLetterOrDigit(c)).ToString()));//new string(tempPrefName.TakeWhile(c => !Char.IsLetter(c)).ToArray());
                         //tempPrefName = Regex.Replace(tempPrefName, @"\s+", "");
 
-                        Person tempPrefPerson = ContainsPerson(tempSubString.ToLower());//new Person(tempSubString.ToLower());
+                        Person tempPrefPerson = ContainsPerson(tempSubString); //.ToLower());//new Person(tempSubString.ToLower());
 
                         if (tempPrefPerson == null)
                         {
-                            tempPrefPerson = new Person(tempSubString.ToLower());
+                            tempPrefPerson = new Person(tempSubString); //.ToLower());
+                            myPeople.Add(tempPrefPerson);
                         }
 
                         tempPerson.AddPreferedPerson(tempPrefPerson);
@@ -162,23 +167,48 @@ class Program
                         tempName = tempName.Remove(0, tempName.IndexOf(":") + 1);
                     }
 
-                    myPeople.Add(tempPerson);
+                    if (ContainsPerson(tempPerson.AccessName) == null)
+                    {
+                        myPeople.Add(tempPerson);
+                    }
                 }
             } while (tempName.Contains("-") == false);
         }
 
         //Person tempKey;
+        //for (int i = 0; i < myPeople.Count; i++)
+        //{
+        //    for (int j = 0; j < myPeople.Count; j++)
+        //    {
+        //        if (myPeople[j].ContainsName(myPeople[i].AccessName) != null)
+        //        {
+        //            myPeople[j].Remove(myPeople[i]);
+        //            myPeople[j].AddPreferedPerson(myPeople[i]);
+        //        }
+        //    }
+        //}
+
+        //Creating Links
+
+        Link tempLink;
+
         for (int i = 0; i < myPeople.Count; i++)
         {
-            for (int j = 0; j < myPeople.Count; j++)
+            for (int j = 0; j < myPeople[i].GetPeople.Count; j++)
             {
-                if (myPeople[j].ContainsName(myPeople[i].AccessName) != null)
+                tempLink = ContainsLink(myPeople[i], myPeople[i].GetPeople[j]);
+
+                if (tempLink == null)
                 {
-                    myPeople[j].Remove(myPeople[i]);
-                    myPeople[j].AddPreferedPerson(myPeople[i]);
+                    tempLink = new Link(myPeople[i], myPeople[i].GetPeople[j]);
+                    myLinks.Add(tempLink);
+                    myPeople[i].AddLink(tempLink);
+                    myPeople[i].GetPeople[j].AddLink(tempLink);
                 }
             }
         }
+
+        GenerateWeights();
 
         if (myScramble == true)
         {
@@ -202,7 +232,65 @@ class Program
         return null;
     }
 
+    public static Link ContainsLink(Person aRightPerson, Person aLeftPerson)
+    {
+        for (int i = 0; i < myLinks.Count; i++)
+        {
+            if (myLinks[i].Contains(aRightPerson) == true && myLinks[i].Contains(aLeftPerson) == true)
+            {
+                return myLinks[i];
+            }
+        }
+        return null;
+    }
+
+    public static void GenerateWeights()
+    {
+        //Depth 1
+        for (int i = 0; i < myLinks.Count; i++)
+        {
+            if (myLinks[i].IsMutual() == true)
+            {
+                //Mutual Love
+                myLinks[i].AccessWeigth += 100;
+            }
+            else
+            {
+                //One Way
+                myLinks[i].AccessWeigth += 50;
+            }
+        }
+
+        //Depth 2, checking sub people
+
+        Person tempRightPerson;
+        Person tempLeftPerson;
+
+        for (int i = 0; i < myLinks.Count; i++)
+        {
+            tempRightPerson = myLinks[i].AccessRightPerson;
+            tempLeftPerson = myLinks[i].AccessLeftPerson;
+
+            for (int j = 0; j < tempRightPerson.GetPeople.Count; j++)
+            {
+                if (tempRightPerson.GetPeople[j].ContainsPerson(tempLeftPerson) == true && tempRightPerson.GetPeople[j] != tempLeftPerson)
+                {
+                    myLinks[i].AccessWeigth += 25;
+                }
+            }
+
+            for (int j = 0; j < tempLeftPerson.GetPeople.Count; j++)
+            {
+                if (tempLeftPerson.GetPeople[j].ContainsPerson(tempRightPerson) == true && tempLeftPerson.GetPeople[j] != tempRightPerson)
+                {
+                    myLinks[i].AccessWeigth += 25;
+                }
+            }
+        }
+    }
+
     static List<Person> myPeople = new List<Person>();
+    static List<Link> myLinks = new List<Link>();
 
     static int myNrOfGroups = 0;
     static bool myScramble = true;

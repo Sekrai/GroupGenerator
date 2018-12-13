@@ -1,0 +1,120 @@
+Number Of Groups: 14
+Scramble: 0			//1 for scrambled groups, 0 for weigthed groups
+
+------------------------------
+Andersson Evert:
+Arabi Eter Filiph:Linus Brommesson:Ek Victor:Bjelk Andreas:
+Aspegren Simon:
+Bengtsson Jonas:Davidsson Ellen:Wien Tulldahl Theo:Teahan Izak:
+Bjelk Andreas:Ek Victor:Karlsson Erik:Arabi Eter Filiph:
+Cabatingan Lucero Mark:Bjelk Andreas:Glemme Vilmer:Hardemo Teo:
+Ek Victor:Jönsson Ivar: 
+Floberg Tobias:Lefèvre Isak:Sandell Emil:Karlsson Erik:
+Fransson Jacob:Jönsson Rosander Annie:Norberg Max:Wien Tulldahl Theo: 
+Gannon Oskar:Ek Victor: 
+Glemme Vilmer:Ek Victor:Bjelk Andreas:Hardemo Teo:
+Hardemo Teo:Ek Victor:Bjelk Andreas:Glemme Vilmer:
+Hargne Johnsson Aina:
+Jakandré Elliot:Hardemo Teo:Glemme Vilmer:
+Jönsson Rosander Annie:Fransson Jacob:Norberg Max:Wien Tulldahl Theo:
+Karlsson Erik:Andersson Axel:Ek Victor:
+Kjellberg Axel:Glemme Vilmer:Hardemo Teo:Bjelk Andreas:
+Lindblad Casper:Ek Victor:Setterlund Hilda:
+Lindsjö Viggo:Björck Nestor:Strid Michael:Tordelius Kevin:
+Martinez Tristan:Hargne Johnsson Aina:Setterlund Hilda:Nyrén Ebba:
+Norberg Max:Jönsson Rosander Annie:Jakandré Elliot:Fransson Jacob:
+Nyrén Ebba:
+Rutanen Juho:Sandell Emil:Fredriksson Niklas:Andersen Linus:
+Setterlund Hilda:Nyrén Ebba:Hargne Johnsson Aina:
+Skarpenfelt Pontus:
+Strid Michael:Lindsjö Viggo:Sövgren Robin:Nyrén Ebba:
+Sövgren Robin:
+Willborg Jesper:
+Wittenbrandt Gabriel:Martinez Tristan:Ek Victor:Jakandré Elliot:
+------------------------------
+
+-------------------------------------------------------------
+Group 1
+-------------------------------------------------------------
+Davidsson Ellen
+Jönsson Ivar
+-------------------------------------------------------------
+Group 2
+-------------------------------------------------------------
+Lindsjö Viggo
+Strid Michael
+Kjellberg Axel
+-------------------------------------------------------------
+Group 3
+-------------------------------------------------------------
+Andersen Linus
+Cabatingan Lucero Mark
+Jakandré Elliot
+-------------------------------------------------------------
+Group 4
+-------------------------------------------------------------
+Ek Victor
+Bjelk Andreas
+Arabi Eter Filiph
+Glemme Vilmer
+Hardemo Teo
+-------------------------------------------------------------
+Group 5
+-------------------------------------------------------------
+Aspegren Simon
+Wien Tulldahl Theo
+Andersson Axel
+-------------------------------------------------------------
+Group 6
+-------------------------------------------------------------
+Floberg Tobias
+Andersson Evert
+Sövgren Robin
+-------------------------------------------------------------
+Group 7
+-------------------------------------------------------------
+Björck Nestor
+Wittenbrandt Gabriel
+Tordelius Kevin
+-------------------------------------------------------------
+Group 8
+-------------------------------------------------------------
+Lefèvre Isak
+Setterlund Hilda
+-------------------------------------------------------------
+Group 9
+-------------------------------------------------------------
+Karlsson Erik
+Sandell Emil
+Fredriksson Niklas
+-------------------------------------------------------------
+Group 10
+-------------------------------------------------------------
+Teahan Izak
+Lindblad Casper
+Linus Brommesson
+-------------------------------------------------------------
+Group 11
+-------------------------------------------------------------
+Bengtsson Jonas
+Willborg Jesper
+-------------------------------------------------------------
+Group 12
+-------------------------------------------------------------
+Gannon Oskar
+Martinez Tristan
+Hargne Johnsson Aina
+Nyrén Ebba
+-------------------------------------------------------------
+Group 13
+-------------------------------------------------------------
+Norberg Max
+Jönsson Rosander Annie
+Fransson Jacob
+-------------------------------------------------------------
+Group 14
+-------------------------------------------------------------
+Rutanen Juho
+Skarpenfelt Pontus
+-------------------------------------------------------------
+
