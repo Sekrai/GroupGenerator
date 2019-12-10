@@ -8,7 +8,7 @@ Björck Nestor:Lindsjö Viggo:Tordelius Kevin:Strid Michael:
 Olsson Linus:Deutgen Edfors Erik:
 Johansson Aleksander:Sefedini Djellon:
 Johansson Kasper:Karlsson Erik:Deutgen Edfors Erik:Olsson Linus:
-Erik Edfors:Olsson Linus:Oredsson Linus:Jönsson Jacob:
+Deutgen Edfors Erik:Olsson Linus:Oredsson Linus:Jönsson Jacob:
 Thomas Barabas:Jönsson Ivar:Nordin Samuel:Norbäck Leo:
 Teahan Izak:Davidsson Ellen:
 Davidsson Ellen:Teahan Izak:Bengtsson Jonas:Rutanen Juho:
@@ -24,7 +24,6 @@ Bernsand Jaroslav:Andersson Axel:Lefèvre Isak:Karlsson Erik:
 Brommesson Linus:Arabi-Eter Filiph:Eklund Hugo:Karlsson Erik:
 Eklund Hugo:Brommesson Linus:Arabi-Eter Filiph:Karlsson Erik:
 Lefèvre Isak:Andersson Axel:Bernsand Jaroslav:Karlsson Erik:
-Deutgen Edfors Erik: 
 Eggerstedt Minimy:
 Fredriksson Niklas:
 Göransson Emelie:
@@ -32,6 +31,35 @@ Olsson Lyon:
 Oredsson Linus: 
 Söderholm Per:
 ------------------------------
+
+
+Tordelius Kevin:Björck Nestor:Lindsjö Viggo SG18:Strid Michael SG18:
+Bettermyr Casper:Berggren Emil:Edestrand Fabian:Henrikson Jack:
+Björck Nestor:Lindsjö Viggo SG18:Tordelius Kevin:Strid Michael SG18:
+Olsson Linus:Deutgen Edfors Erik:
+Johansson Aleksander:Sefedini Djellon:
+Johansson Kasper:Karlsson Erik SG18:Deutgen Edfors Erik:Olsson Linus:
+Deutgen Edfors Erik:Olsson Linus:Oredsson Linus:Jönsson Jacob SG18:
+Teahan Izak:Davidsson Ellen:
+Davidsson Ellen:Teahan Izak:Bengtsson Jonas SG18:Rutanen Juho SG18:
+Stjerna Herman:Lefèvre Isak:Andersson Axel:Teahan Izak:
+Henrikson Jack:Bettermyr Casper:Berggren Emil:Edestrand Fabian:
+Berggren Emil:Bettermyr Casper:Henrikson Jack:Edestrand Fabian:
+Edestrand Fabian:Bettermyr Casper:Henrikson Jack:Berggren Emil:
+Mo Henrik:Stjerna Herman:Berggren Emil:Andersen Linus:
+Sefedini Djellon:Johansson Aleksander:
+Andersson Axel:Bernsand Jaroslav:Lefèvre Isak:Karlsson Erik SG18:
+Haglund Axel:Andersson Axel:Eklund Hugo:Nordström Axel SU18B:
+Bernsand Jaroslav:Andersson Axel:Lefèvre Isak:Karlsson Erik SG18:
+Brommesson Linus:Arabi-Eter Filiph SG18:Eklund Hugo:Karlsson Erik SG18:
+Eklund Hugo:Brommesson Linus:Arabi-Eter Filiph SG18:Karlsson Erik SG18:
+Lefèvre Isak:Andersson Axel:Bernsand Jaroslav:Karlsson Erik SG18:
+Eggerstedt Minimy:
+Fredriksson Niklas:
+Göransson Emelie:
+Olsson Lyon: 
+Oredsson Linus: 
+Söderholm Per:
 
 -------------------------------------------------------------
 Group 1
@@ -88,4 +116,62 @@ nordström axel
 bernsand jaroslav
 andersson axel
 karlsson erik
+-------------------------------------------------------------
+
+
+-------------------------------------------------------------
+Group 1
+-------------------------------------------------------------
+Rutanen Juho
+Lindsjö Viggo
+Björck Nestor
+Tordelius Kevin
+Mo Henrik
+-------------------------------------------------------------
+Group 2
+-------------------------------------------------------------
+Bernsand Jaroslav
+Andersson Axel
+Lefèvre Isak
+Karlsson Erik
+Andersen Linus
+-------------------------------------------------------------
+Group 3
+-------------------------------------------------------------
+Olsson Linus
+Johansson Kasper
+Deutgen Edfors Erik
+Oredsson Linus
+Eklund Hugo
+-------------------------------------------------------------
+Group 4
+-------------------------------------------------------------
+Jönsson Jacob
+Haglund Axel
+Stjerna Herman
+Teahan Izak
+Davidsson Ellen
+-------------------------------------------------------------
+Group 5
+-------------------------------------------------------------
+Johansson Aleksander
+Sefedini Djellon
+Jönsson Ivar
+Norbäck Leo
+Strid Michael
+-------------------------------------------------------------
+Group 6
+-------------------------------------------------------------
+Edestrand Fabian
+Berggren Emil
+Bettermyr Casper
+Henrikson Jack
+Erik Edfors
+-------------------------------------------------------------
+Group 7
+-------------------------------------------------------------
+Thomas Barabas
+Nordin Samuel
+Nordström Axel
+Bengtsson Jonas
 -------------------------------------------------------------

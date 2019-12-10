@@ -26,7 +26,14 @@ static class Randomizer
     public static Dictionary<int, List<Person>> Random(List<Person> somePeople, int aNrOfGroups = 7, bool aScrambleFlag = true)
     {
         Dictionary<int, List<Person>> tempGroups = new Dictionary<int, List<Person>>();
-        List<Person> remainingPeople = somePeople;
+        List<Person> remainingPeople = new List<Person>();
+
+
+        for (int i = 0; i < somePeople.Count; i++)
+        {
+            remainingPeople.Add(somePeople[i]);
+        }
+
 
         for (int i = 0; i < aNrOfGroups; i++)
         {
@@ -181,7 +188,7 @@ static class Randomizer
 
                 for (int i = 0; i < currentPerson.GetLinks.Count; i++)
                 {
-                    if (currentPerson.GetLinks[i].AccessWeigth >= 75)
+                    if (currentPerson.GetLinks[i].AccessWeigth >= 50)
                     {
                         tempLinkedPerson = currentPerson.GetLinks[i].GetOther(currentPerson);
 

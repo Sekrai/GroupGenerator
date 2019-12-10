@@ -1,0 +1,33 @@
+Number Of Groups: 7
+Scramble: 0			//1 for scrambled groups, 0 for weigthed groups
+
+------------------------------
+Daniel Ahrén:Villemo:
+Daniel Akke:
+Alexander Algerbo:
+Matilda Andersson:
+Mattias Andersson:
+William Bornarve:
+Jonathan Disenfeldt:
+Oliver Duus Nielsen:
+Nils Fredriksson:
+Carl Frøslee Jonsson:
+Alan Garcia Moran:
+Hugo Göransson:
+Iqbal Mohammad Hossain:
+Alvin Höst:
+Joel Kullman:
+Lucas Larsson:
+Dawid Lembrér:
+Leonard Lundberg:
+Sebastian Möller:
+Oliver Palm:
+David Rasmusson:
+Shaya Rezai Yazdi:
+Mac Schultz:
+Gustav Skarrie:
+Oskar Svensson:
+Lev Volkov:
+Emil Winberg:
+Axel Wokander:
+------------------------------

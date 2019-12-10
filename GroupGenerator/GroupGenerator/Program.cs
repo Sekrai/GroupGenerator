@@ -115,6 +115,12 @@ class Program
             int tempFlag = -1;
             int.TryParse(Regex.Match(stream.ReadLine().ToString(), @"\d+").Value, out tempFlag);
 
+            //tempName = stream.ReadLine().ToString();
+            //tempSubString = tempName.Substring(0, tempName.IndexOf(":"));
+            //tempName = tempName.Remove(0, tempName.IndexOf(":") + 1);
+
+            //myCurrentClass = tempName;
+
             if (tempFlag == 0)
             {
                 myScramble = false;
@@ -294,5 +300,6 @@ class Program
 
     static int myNrOfGroups = 0;
     static bool myScramble = true;
+    //static string myCurrentClass = "";
 }
 
