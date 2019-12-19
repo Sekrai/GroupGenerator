@@ -11,7 +11,7 @@ class Link
     {
         myRightPerson = aRight;
         myLeftPerson = aLeft;
-        myWeigth = 0;
+        myWeigth = 0f;
     }
 
     public bool Contains(Person aPerson)
@@ -32,24 +32,13 @@ class Link
         return myRightPerson;
     }
 
-    public bool IsMutual()
-    {
-        for (int i = 0; i < myRightPerson.GetPeople.Count; i++)
-        {
-            if (myRightPerson.GetPeople[i] == myLeftPerson)//.ContainsPerson(myRightPerson))
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public Person AccessRightPerson { get => myRightPerson; }
     public Person AccessLeftPerson { get => myLeftPerson; }
-    public int AccessWeigth { get => myWeigth; set => myWeigth = value; }
+    public float AccessWeigth { get => myWeigth; set => myWeigth = value; }
 
     Person myRightPerson;
     Person myLeftPerson;
-    int myWeigth;
+    float myWeigth;
 
 }
+
