@@ -5,18 +5,18 @@ Scramble: 0			//1 for scrambled groups, 0 for weigthed groups
 Alhomsi Fares:
 Andersen Linus:Mirhosseini Mina:Randau Fabian:Tandberg Molly:
 Araki Al Motasim:Sandell Emil:Tegnvallius Boklund Alexander:Persson Tim:
-Thomas Barabas:Jönsson Ivar:Nordin Samuel:Norbäck Leo:
+Barabas Thomas:
 Carlsson Elias:
-Filhage Andrew:Karlsson Erik SG18:Andersson Axel:Norbäck Leo:
+Filhage Andrew:Karlsson Erik:Andersson Axel:Norbäck Leo:
 Jönsson Ivar:Ek Victor:
 Jönsson Jacob:Mirhosseini Mina:Randau Fabian:Jönsson Ivar:
 Karlsson Flinga: 
 Kellerman Vincent:Tufvesson Holm Sebastian:Alhomsi Fares:
 Kniberg Emil:
 Mirhosseini Mina:Andersen Linus:Randau Fabian:Hargne Johnsson Aina: 
-Norbäck Leo:Andersson Axel:Filhage Andrew:Karlsson Erik SG18:
+Norbäck Leo:Andersson Axel:Filhage Andrew:Karlsson Erik:
 Nordin Samuel:Norbäck Leo:Barabas Thomas:Filhage Andrew:
-Nordström Axel:Pantzar Wilhem:Eklund Hugo:Karlsson Erik SG18:
+Nordström Axel:Pantzar Wilhem:Eklund Hugo:Karlsson Erik:
 Oulehri Ilias:
 Pantzar Wilhem:Oulehri Ilias:Nordström Axel:Mirhosseini Mina:
 Persson Nicke:
